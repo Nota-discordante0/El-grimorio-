@@ -1,0 +1,88 @@
+body {
+  background-color: #000;
+  color: #b86bff;
+  font-family: 'Georgia', serif;
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #d3adf7;
+}
+
+#note-form {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #a74dff44;
+  margin-bottom: 30px;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  background-color: #222;
+  color: #b86bff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  resize: none;
+  font-size: 1rem;
+}
+
+label, input[type="checkbox"] {
+  display: inline-block;
+  margin: 10px 0;
+  color: #c084fc;
+}
+
+button {
+  background-color: #7f35fc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #a569ff;
+}
+
+#notes-container {
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.note-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px #a74dff44;
+  animation: pageTurn 0.6s ease-in-out forwards;
+}
+
+@keyframes pageTurn {
+  0% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateY(90deg) scale(1.02);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}

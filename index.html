@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>El Grimorio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📓 El Grimorio</h1>
+
+  <div id="auth-container">
+    <button id="login-btn">Iniciar sesión con Google</button>
+    <button id="logout-btn" style="display:none;">Cerrar sesión</button>
+  </div>
+
+  <form id="note-form" style="display:none;">
+    <textarea id="note" placeholder="Escribe tu nota..."></textarea>
+    <label>
+      <input type="checkbox" id="reminder"> ¿Agregar recordatorio?
+    </label>
+    <input type="file" id="image-upload" multiple>
+    <button type="submit">Guardar</button>
+  </form>
+
+  <div id="notes-container"></div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
